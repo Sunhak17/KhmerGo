@@ -1,0 +1,31 @@
+.about-page,
+.tours-page,
+.destinations-page {
+  padding: 120px 0 80px;
+}
+
+.page-title {
+  text-align: center;
+  font-family: "Impact", "Arial Narrow Bold", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.page-shell {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: rgba(245, 247, 251, 0.86);
+}
+
+.page-shell h2 {
+  margin: 36px 0 14px;
+  font-size: 1.6rem;
+  color: #ffb18a;
+}
+
+.page-shell ul {
+  margin-left: 20px;
+}

@@ -1,0 +1,60 @@
+.destination-list-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.destination-list-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(14, 29, 43, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.destination-list-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.destination-list-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+.destination-list-meta h3 {
+  color: #1f2e3a;
+  font-size: 1.02rem;
+  margin-bottom: 3px;
+}
+
+.destination-list-meta p {
+  color: #5c6e7e;
+  font-size: 0.82rem;
+}
+
+.destination-list-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(117, 96, 179, 0.4);
+  color: #7355b8;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .destination-list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .destination-list-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,108 @@
+.inspire-section {
+  position: relative;
+  padding: 84px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(10, 15, 24, 0.42), rgba(10, 15, 24, 0.86)), var(--inspire-bg);
+}
+
+.inspire-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 40px;
+  align-items: end;
+  min-height: 560px;
+}
+
+.inspire-copy {
+  padding-bottom: 20px;
+}
+
+.inspire-copy h2 {
+  max-width: 8ch;
+  margin-bottom: 24px;
+  font-family: "Impact", "Arial Narrow Bold", sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.inspire-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: rgba(245, 247, 251, 0.92);
+}
+
+.play-ring {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.inspire-copy p {
+  max-width: 320px;
+  color: rgba(245, 247, 251, 0.8);
+  line-height: 1.8;
+  font-size: 0.94rem;
+}
+
+.inspire-gallery {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  align-items: end;
+}
+
+.inspire-card {
+  min-height: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-image: linear-gradient(rgba(16, 20, 30, 0.18), rgba(16, 20, 30, 0.62)), var(--card-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.inspire-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(6, 10, 15, 0.66) 100%);
+}
+
+.inspire-card span {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.inspire-card--wide {
+  min-height: 220px;
+}
+
+@media (max-width: 1100px) {
+  .inspire-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .inspire-gallery {
+    grid-template-columns: 1fr;
+  }
+}
