@@ -1,7 +1,9 @@
 .contact-page {
   padding: 120px 0 56px;
-  background: #f1f2f4;
-  color: #2f353c;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(242, 172, 8, 0.09), transparent 38%),
+    linear-gradient(180deg, #0c121a 0%, #111926 55%, #0d141d 100%);
+  color: rgba(245, 247, 251, 0.9);
 }
 
 .contact-shell,
@@ -12,19 +14,19 @@
 .contact-heading {
   text-align: center;
   max-width: 670px;
-  margin: 0 auto 36px;
+  margin: 36px auto 36px;
 }
 
 .contact-heading h1,
 .contact-heading h2 {
-  color: #1d232b;
+  color: #f5f7fb;
   font-size: clamp(1.75rem, 3.7vw, 2.5rem);
   line-height: 1.2;
   margin-bottom: 10px;
 }
 
 .contact-heading p {
-  color: #666d76;
+  color: rgba(245, 247, 251, 0.66);
   font-size: 0.95rem;
   line-height: 1.65;
 }
@@ -37,15 +39,16 @@
 
 .contact-form-card,
 .contact-details-card {
-  background: #ffffff;
-  border: 1px solid #dde2e8;
-  border-radius: 4px;
+  background: rgba(15, 23, 34, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
   padding: 22px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
 }
 
 .contact-form-card h2,
 .contact-details-card h2 {
-  color: #1f262d;
+  color: #f5f7fb;
   font-size: 1.7rem;
   margin-bottom: 16px;
 }
@@ -64,9 +67,9 @@
 .contact-form-card input,
 .contact-form-card textarea {
   width: 100%;
-  border: 1px solid #e1e6ec;
-  background: #f9fafb;
-  color: #2f353c;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(6, 12, 20, 0.7);
+  color: rgba(245, 247, 251, 0.9);
   border-radius: 4px;
   padding: 11px;
   font-size: 0.84rem;
@@ -78,7 +81,12 @@
 .contact-form-card input:focus,
 .contact-form-card textarea:focus {
   border-color: #f2ac08;
-  box-shadow: 0 0 0 3px rgba(242, 172, 8, 0.18);
+  box-shadow: 0 0 0 3px rgba(242, 172, 8, 0.24);
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+  color: rgba(245, 247, 251, 0.46);
 }
 
 .contact-form-card button {
@@ -91,7 +99,8 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #fff;
-  background: #1f252d;
+  background: linear-gradient(135deg, #f4bc2f, #f2ac08);
+  color: #131d2a;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
@@ -102,7 +111,7 @@
 }
 
 .contact-details-card > p {
-  color: #727a83;
+  color: rgba(245, 247, 251, 0.62);
   font-size: 0.9rem;
   margin-bottom: 16px;
 }
@@ -117,9 +126,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #e2e6eb;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
-  background: #fafbfc;
+  background: rgba(4, 9, 16, 0.58);
   padding: 9px 10px;
 }
 
@@ -130,15 +139,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  background: #1f252d;
+  color: #111a25;
+  background: #f4bc2f;
   font-size: 0.72rem;
   flex: 0 0 auto;
 }
 
 .contact-detail-item h3 {
   font-size: 0.72rem;
-  color: #1f262d;
+  color: rgba(245, 247, 251, 0.92);
   margin-bottom: 2px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -146,7 +155,7 @@
 
 .contact-detail-item p {
   font-size: 0.75rem;
-  color: #66707a;
+  color: rgba(245, 247, 251, 0.62);
 }
 
 .contact-social-inline {
@@ -158,7 +167,7 @@
 
 .contact-social-inline h3 {
   font-size: 0.8rem;
-  color: #303843;
+  color: rgba(245, 247, 251, 0.8);
 }
 
 .contact-social-inline div {
@@ -171,12 +180,12 @@
   width: 26px;
   height: 26px;
   border-radius: 4px;
-  border: 1px solid #d9dfe6;
+  border: 1px solid rgba(255, 255, 255, 0.24);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #1f252d;
-  background: #ffffff;
+  color: rgba(245, 247, 251, 0.88);
+  background: rgba(4, 9, 16, 0.58);
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
@@ -187,7 +196,9 @@
 }
 
 .contact-faq-section {
-  background: #ffffff;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(242, 172, 8, 0.08), transparent 34%),
+    linear-gradient(180deg, #0d141d 0%, #0c121a 100%);
   padding: 70px 0;
 }
 
@@ -209,10 +220,10 @@
 }
 
 .faq-list details {
-  border: 1px solid #e1e6ec;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   overflow: hidden;
-  background: #f9fafb;
+  background: rgba(15, 23, 34, 0.84);
 }
 
 .faq-list summary {
@@ -223,7 +234,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 14px 16px;
-  color: #1f252d;
+  color: rgba(245, 247, 251, 0.92);
   font-size: 0.83rem;
   font-weight: 600;
 }
@@ -233,11 +244,11 @@
 }
 
 .faq-list details[open] summary {
-  border-bottom: 1px solid #e1e6ec;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .faq-list details p {
-  color: #67717a;
+  color: rgba(245, 247, 251, 0.66);
   font-size: 0.84rem;
   line-height: 1.6;
   padding: 12px 16px 16px;
@@ -246,9 +257,9 @@
 .faq-image-card {
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #e2e7ee;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   min-height: 320px;
-  background: #dbe2ea;
+  background: #121c2a;
 }
 
 .faq-image-card img {

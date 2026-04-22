@@ -9,6 +9,7 @@
   font-family: "Impact", "Arial Narrow Bold", sans-serif;
   font-size: clamp(2.4rem, 5vw, 4rem);
   text-transform: uppercase;
+  margin-top: 30px ;
   margin-bottom: 28px;
 }
 
