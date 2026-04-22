@@ -5,6 +5,7 @@ import Home from "./views/Home";
 import Destinations from "./views/Destinations";
 import Tours from "./views/Tours";
 import About from "./views/About";
+import Contact from "./views/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/destinations" element={<Destinations />} />
       <Route path="/tours" element={<Tours />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

@@ -26,7 +26,7 @@ export default function Footer() {
             <NavLink to="/about" className={({ isActive }) => (isActive ? "is-current" : "")}>About</NavLink>
             <NavLink to="/destinations" className={({ isActive }) => (isActive ? "is-current" : "")}>Destinations</NavLink>
             <NavLink to="/tours" className={({ isActive }) => (isActive ? "is-current" : "")}>Tours</NavLink>
-            <NavLink to="/about" className={({ isActive }) => (isActive ? "is-current" : "")}>Contact</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "is-current" : "")}>Contact</NavLink>
           </nav>
           <p className="footer-copy">
             Crafted for adventure lovers. Discover Cambodia with curated routes and trusted local guides.
