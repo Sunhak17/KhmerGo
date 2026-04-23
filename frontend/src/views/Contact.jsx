@@ -83,14 +83,14 @@ export default function Contact() {
                   <span><FaMapMarkerAlt /></span>
                   <div>
                     <h3>Address</h3>
-                    <p>Raja Koha No. 121</p>
+                    <p>Phnom Penh, Cambodia</p>
                   </div>
                 </div>
                 <div className="contact-detail-item">
                   <span><FaMobileAlt /></span>
                   <div>
                     <h3>Mobile</h3>
-                    <p>+1 (309) 785 945</p>
+                    <p>+855 12 345 678</p>
                   </div>
                 </div>
                 <div className="contact-detail-item">

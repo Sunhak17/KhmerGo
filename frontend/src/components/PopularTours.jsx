@@ -44,7 +44,7 @@ export default function PopularTours() {
     <section id="tours" className="popular-tours">
       <div className="container popular-tours-shell">
         <h2>Popular Tours</h2>
-        <p className="popular-tours-subtitle">There will be a small title here.</p>
+        <p className="popular-tours-subtitle">Explore our most popular tours and destinations</p>
         
         <div className="popular-tours-grid">
           {tours.map((tour) => (

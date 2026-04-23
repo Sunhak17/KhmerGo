@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
 import ProvinceGrid from "./ProvinceGrid";
-import { provinceData } from "./destinationData";
+import { provinceData } from "../../data/destinationData";
 import "../../styles/pages/destination/Destinations.css";
 
 export default function Destinations() {

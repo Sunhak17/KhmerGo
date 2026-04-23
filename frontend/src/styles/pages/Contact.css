@@ -80,7 +80,7 @@
 
 .contact-form-card input:focus,
 .contact-form-card textarea:focus {
-  border-color: #f2ac08;
+  border-color: #f09b12;
   box-shadow: 0 0 0 3px rgba(242, 172, 8, 0.24);
 }
 
@@ -99,7 +99,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #fff;
-  background: linear-gradient(135deg, #f4bc2f, #f2ac08);
+  background: linear-gradient(135deg, #f09b12, #c68627);
   color: #131d2a;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
@@ -140,7 +140,7 @@
   align-items: center;
   justify-content: center;
   color: #111a25;
-  background: #f4bc2f;
+  background: #f09b12;
   font-size: 0.72rem;
   flex: 0 0 auto;
 }

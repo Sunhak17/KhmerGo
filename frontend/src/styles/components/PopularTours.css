@@ -17,7 +17,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: center;
-  color: #90d7ff;
+  color: #f09b12;
 }
 
 .popular-tours-subtitle {
@@ -68,7 +68,7 @@
 }
 
 .popular-tour-content h3 {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
   margin-bottom: 2px;
   color: #f4f8fc;

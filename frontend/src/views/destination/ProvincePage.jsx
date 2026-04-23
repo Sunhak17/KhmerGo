@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
 import PlaceCards from "./PlaceCards";
-import { getProvinceById, provinceData } from "./destinationData";
+import { getProvinceById, provinceData } from "../../data/destinationData";
 import "../../styles/pages/destination/ProvincePage.css";
 
 export default function ProvincePage() {

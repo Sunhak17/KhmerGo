@@ -1,8 +1,8 @@
-import angkorWat from "../../assets/images/slider/1.jpg";
-import phnom from "../../assets/images/slider/2.jpg";
-import beach from "../../assets/images/slider/3.jpg";
-import mountain from "../../assets/images/slider/4.jpg";
-import sunset from "../../assets/images/slider/5.jpg";
+import angkorWat from "../assets/images/slider/1.jpg";
+import phnom from "../assets/images/slider/2.jpg";
+import beach from "../assets/images/slider/3.jpg";
+import mountain from "../assets/images/slider/4.jpg";
+import sunset from "../assets/images/slider/5.jpg";
 
 export const provinceData = [
   {

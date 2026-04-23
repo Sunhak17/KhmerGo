@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
-import { getPlaceBySlug, getProvinceById, provinceData } from "./destinationData";
+import { getPlaceBySlug, getProvinceById, provinceData } from "../../data/destinationData";
 import "../../styles/pages/destination/PlacePage.css";
 
 export default function PlacePage() {

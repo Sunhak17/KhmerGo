@@ -1,6 +1,6 @@
 .footer {
   background: #070b11;
-  border-top: 2px solid #d93025;
+  border-top: 2px solid #f09b12;
   padding: 30px 0;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .footer-social button:hover {
-  border-color: #d93025;
+  border-color: #f09b12;
   color: #ffffff;
   transform: translateY(-1px);
 }
@@ -83,7 +83,7 @@
   right: 0;
   bottom: -8px;
   height: 2px;
-  background: #d93025;
+  background: #f09b12;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
@@ -140,7 +140,7 @@
 .footer-subscribe button {
   border: 0;
   width: 38px;
-  background: linear-gradient(180deg, #ff4a2d, #d93025);
+  background: linear-gradient(180deg, #f09b12, #c68627);
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;

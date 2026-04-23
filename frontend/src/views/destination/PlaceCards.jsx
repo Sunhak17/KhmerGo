@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { slugify } from "./destinationData";
+import { slugify } from "../../data/destinationData";
 import "../../styles/pages/destination/PlaceCards.css";
 
 export default function PlaceCards({ province, onSelectPlace, activePlaceName }) {

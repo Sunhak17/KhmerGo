@@ -142,7 +142,7 @@
 
 .hero-steps button.is-active {
   color: var(--text);
-  background: linear-gradient(135deg, rgba(233, 106, 44, 0.98), rgba(255, 131, 77, 0.9));
+  background: linear-gradient(135deg, #d29431fa, rgba(255, 131, 77, 0.9));
   transform: translateX(-4px) scale(1.05);
   box-shadow: 0 14px 30px rgba(233, 106, 44, 0.34), 0 10px 24px rgba(0, 0, 0, 0.28);
 }
