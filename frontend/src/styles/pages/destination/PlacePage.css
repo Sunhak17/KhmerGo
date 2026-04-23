@@ -1,0 +1,149 @@
+.destinations-page {
+  padding: 120px 0 80px;
+}
+
+.destinations-page--dark {
+  background:
+    radial-gradient(circle at top, rgba(242, 172, 8, 0.1), transparent 28%),
+    linear-gradient(180deg, #0b1119 0%, #101926 52%, #0b1119 100%);
+  color: rgba(245, 247, 251, 0.92);
+}
+
+.destinations-shell {
+  display: grid;
+  gap: 28px;
+}
+
+.province-page-back {
+  margin-bottom: -4px;
+}
+
+.province-page-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(245, 247, 251, 0.82);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.province-detail-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.province-detail-kicker {
+  color: #f2ac08;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.province-detail-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.province-detail-header h2 {
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.province-detail-header p {
+  color: rgba(245, 247, 251, 0.68);
+  line-height: 1.7;
+}
+
+.province-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.province-detail-meta span {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: rgba(245, 247, 251, 0.82);
+  background: rgba(16, 25, 38, 0.88);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.place-detail-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(14, 20, 30, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.26);
+}
+
+.place-detail-image {
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.place-detail-body {
+  padding: 24px;
+  display: grid;
+  align-content: start;
+}
+
+.place-detail-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.place-detail-topline span {
+  color: #f2ac08;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.place-detail-topline small {
+  color: rgba(245, 247, 251, 0.56);
+  font-size: 0.74rem;
+}
+
+.place-detail-body h3 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  margin-bottom: 10px;
+}
+
+.place-detail-body p {
+  color: rgba(245, 247, 251, 0.72);
+  line-height: 1.75;
+}
+
+@media (max-width: 1100px) {
+  .place-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .place-detail-image {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .province-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,40 @@
+.destinations-page {
+  padding: 120px 0 80px;
+}
+
+.destinations-page--dark {
+  background:
+    radial-gradient(circle at top, rgba(242, 172, 8, 0.1), transparent 28%),
+    linear-gradient(180deg, #0b1119 0%, #101926 52%, #0b1119 100%);
+  color: rgba(245, 247, 251, 0.92);
+}
+
+.destinations-shell {
+  display: grid;
+  gap: 28px;
+}
+
+.destinations-hero {
+  max-width: 780px;
+}
+
+.destinations-kicker {
+  color: #f2ac08;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.destinations-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.destinations-hero p {
+  color: rgba(245, 247, 251, 0.68);
+  line-height: 1.7;
+}

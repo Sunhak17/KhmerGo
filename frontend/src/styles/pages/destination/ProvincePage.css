@@ -1,0 +1,85 @@
+.destinations-page {
+  padding: 120px 0 80px;
+}
+
+.destinations-page--dark {
+  background:
+    radial-gradient(circle at top, rgba(242, 172, 8, 0.1), transparent 28%),
+    linear-gradient(180deg, #0b1119 0%, #101926 52%, #0b1119 100%);
+  color: rgba(245, 247, 251, 0.92);
+}
+
+.destinations-shell {
+  display: grid;
+  gap: 28px;
+}
+
+.province-page-back {
+  margin-top: 40px;
+  margin-bottom: -4px;
+}
+
+.province-page-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(245, 247, 251, 0.82);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.province-places-section {
+  display: grid;
+  gap: 20px;
+}
+
+.province-places-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.province-detail-kicker {
+  color: #f2ac08;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.province-places-header h2 {
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.province-places-header p {
+  color: rgba(245, 247, 251, 0.68);
+  line-height: 1.7;
+}
+
+.province-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.province-detail-meta span {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: rgba(245, 247, 251, 0.82);
+  background: rgba(16, 25, 38, 0.88);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .province-places-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
