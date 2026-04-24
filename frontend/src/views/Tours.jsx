@@ -81,7 +81,7 @@ export default function Tours() {
       <section className="tours-page">
         <div className="container">
           <h2 className="page-title">
-            All Tours
+            All Service
           </h2>
           <div className="tours-grid">
             {allTours.map((tour) => (

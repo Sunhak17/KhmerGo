@@ -36,7 +36,6 @@ export default function About() {
             <ul>
               <li>Expert local guides with deep knowledge of Cambodia</li>
               <li>Competitive pricing and value for money</li>
-              <li>24/7 customer support and emergency assistance</li>
               <li>Flexible booking and cancellation policies</li>
               <li>Customizable tours for all travel styles</li>
               <li>Commitment to sustainable and responsible tourism</li>

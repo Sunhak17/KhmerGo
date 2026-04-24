@@ -25,7 +25,7 @@ export default function Footer() {
             <NavLink to="/" end className={({ isActive }) => (isActive ? "is-current" : "")}>Home</NavLink>
             <NavLink to="/about" className={({ isActive }) => (isActive ? "is-current" : "")}>About</NavLink>
             <NavLink to="/destinations" className={({ isActive }) => (isActive ? "is-current" : "")}>Destinations</NavLink>
-            <NavLink to="/tours" className={({ isActive }) => (isActive ? "is-current" : "")}>Tours</NavLink>
+            <NavLink to="/tours" className={({ isActive }) => (isActive ? "is-current" : "")}>Service</NavLink>
             <NavLink to="/contact" className={({ isActive }) => (isActive ? "is-current" : "")}>Contact</NavLink>
           </nav>
           <p className="footer-copy">
