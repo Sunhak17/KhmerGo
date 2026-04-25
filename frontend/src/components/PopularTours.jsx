@@ -1,18 +1,18 @@
 import React from "react";
 import angkorWat from "../assets/images/slider/1.jpg";
-import phnom from "../assets/images/slider/2.jpg";
-import beach from "../assets/images/slider/3.jpg";
+import kampot from "../assets/images/popular_tour/kampot.jpg";
+import wat_phnom from "../assets/images/popular_tour/wat_phnom.jpg";
 import slide4 from "../assets/images/slider/4.jpg";
-import slide5 from "../assets/images/slider/5.jpg";
+import bou_sra from "../assets/images/popular_tour/bou_sra.jpg";
 import "../styles/components/PopularTours.css";
 
 export default function PopularTours() {
   const tours = [
     {
       id: 1,
-      title: "Royal Palace",
-      image: beach,
-      description: "Phnom Penh",
+      title: "Sea Horse",
+      image: kampot,
+      description: "Kampot",
     },
     {
       id: 2,
@@ -22,9 +22,9 @@ export default function PopularTours() {
     },
     {
       id: 3,
-      title: "Phnom Kampong Trach",
-      image: phnom,
-      description: "Kampot",
+      title: "Wat Phnom",
+      image: wat_phnom,
+      description: "Phnom Penh",
     },
     {
       id: 4,
@@ -34,9 +34,9 @@ export default function PopularTours() {
     },
     {
       id: 5,
-      title: "Angkor Thom",
-      image: slide5,
-      description: "Siem Reap",
+      title: "Bou Sra",
+      image: bou_sra,
+      description: "Mondulkiri",
     },
   ];
 

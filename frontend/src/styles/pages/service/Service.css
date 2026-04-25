@@ -1,5 +1,5 @@
 .service-page {
-  padding: 120px 0 80px;
+  padding: 100px 0 80px;
   background:
     radial-gradient(circle at top, rgba(242, 172, 8, 0.08), transparent 26%),
     linear-gradient(180deg, #0b1119 0%, #101926 52%, #0b1119 100%);
@@ -20,6 +20,7 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
