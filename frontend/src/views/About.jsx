@@ -46,7 +46,7 @@ export default function About() {
             </h2>
             <p>
               📧 Email: info@khmergo.com<br/>
-              📞 Phone: +855 (0) 123 456 789<br/>
+              📞 Phone: +855 12 456 789<br/>
               📍 Address: Phnom Penh, Cambodia
             </p>
           </div>

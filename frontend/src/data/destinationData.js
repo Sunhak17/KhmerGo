@@ -1,8 +1,30 @@
-import angkorWat from "../assets/images/slider/1.jpg";
-import phnom from "../assets/images/slider/2.jpg";
-import beach from "../assets/images/slider/3.jpg";
-import mountain from "../assets/images/slider/4.jpg";
-import sunset from "../assets/images/slider/5.jpg";
+import pp from "../assets/images/destination/province/pp.jpg";
+import sr from "../assets/images/destination/province/sr.jpg";
+import btb from "../assets/images/destination/province/btb.jpg";
+import shv from "../assets/images/destination/province/kps.jpg";
+import kp from "../assets/images/destination/province/kp.jpg";
+import kep from "../assets/images/destination/province/kep.jpg";
+import kk from "../assets/images/destination/province/koh_kong.jpg";
+import tk from "../assets/images/destination/province/takeo.jpg";
+import kd from "../assets/images/destination/province/kandal.jpg";
+import pv from "../assets/images/destination/province/preyveng.jpg";
+import svr from "../assets/images/destination/province/svayrieng.jpg";
+import kpc from "../assets/images/destination/province/kampong_cham.jpg";
+import kc from "../assets/images/destination/province/kampong_chhang.jpg";
+import ks from "../assets/images/destination/province/Kampong_Speu.jpg";
+import ps from "../assets/images/destination/province/pursat.png";
+import btm from "../assets/images/destination/province/Banteay_Meanchey.jpg";
+import odm from "../assets/images/destination/province/Oddar_meanchey.jpg";
+import ph from "../assets/images/destination/province/Preah_Vihear.jpg";
+import st from "../assets/images/destination/province/Stung_treng.jpg";
+import kt from "../assets/images/destination/province/kratie.jpg";
+import mdk from "../assets/images/destination/province/mondulkiri.jpg";
+import rtk from "../assets/images/destination/province/ratanakiri.jpg";
+import tb from "../assets/images/destination/province/Tboung_khmum.jpg";
+import pl from "../assets/images/destination/province/pailin.jpg";
+import kpt from "../assets/images/destination/province/kpt.jpg";
+
+import { placeImages } from "./placeImages";
 
 export const provinceData = [
   {
@@ -10,11 +32,11 @@ export const provinceData = [
     name: "Phnom Penh",
     type: "Capital city",
     description: "Cambodia's capital blends riverfront energy, royal landmarks, and vibrant food streets.",
-    image: phnom,
+    image: pp,
     places: [
-      { name: "Royal Palace", detail: "A golden landmark of Khmer architecture and the official residence of the monarchy.", image: phnom, tag: "Heritage", bestFor: "Architecture" },
-      { name: "Sisowath Quay", detail: "A lively riverside promenade for sunset walks, cafes, and local evening life.", image: sunset, tag: "Riverfront", bestFor: "Sunset" },
-      { name: "Central Market", detail: "An iconic market for shopping, local snacks, and classic Phnom Penh city atmosphere.", image: beach, tag: "Market", bestFor: "Shopping" },
+      { name: "Royal Palace", detail: "A golden landmark of Khmer architecture and the official residence of the monarchy.", image: placeImages.royalPalace, tag: "Heritage", bestFor: "Architecture" },
+      { name: "Sisowath Quay", detail: "A lively riverside promenade for sunset walks, cafes, and local evening life.", image: placeImages.sisowathQuay, tag: "Riverfront", bestFor: "Sunset" },
+      { name: "Central Market", detail: "An iconic market for shopping, local snacks, and classic Phnom Penh city atmosphere.", image: placeImages.centralMarket, tag: "Market", bestFor: "Shopping" },
     ],
   },
   {
@@ -22,11 +44,11 @@ export const provinceData = [
     name: "Siem Reap",
     type: "Tourism hub",
     description: "The gateway to Angkor with temple sunrise experiences and a strong cultural scene.",
-    image: angkorWat,
+    image: sr,
     places: [
-      { name: "Angkor Wat Sunrise", detail: "The classic Cambodia experience with iconic reflection views and world-famous stone reliefs.", image: angkorWat, tag: "Temple", bestFor: "Sunrise" },
-      { name: "Pub Street", detail: "A busy night-time district with food, music, and easy access to local tours.", image: sunset, tag: "Nightlife", bestFor: "Food" },
-      { name: "Tonle Sap Lake", detail: "Floating village life and water landscapes that show another side of Siem Reap travel.", image: beach, tag: "Lake", bestFor: "Boat tour" },
+      { name: "Angkor Wat Sunrise", detail: "The classic Cambodia experience with iconic reflection views and world-famous stone reliefs.", image: placeImages.angkorWatSunrise, tag: "Temple", bestFor: "Sunrise" },
+      { name: "Pub Street", detail: "A busy night-time district with food, music, and easy access to local tours.", image: placeImages.pubStreet, tag: "Nightlife", bestFor: "Food" },
+      { name: "Tonle Sap Lake", detail: "Floating village life and water landscapes that show another side of Siem Reap travel.", image: placeImages.tonleSapLake, tag: "Lake", bestFor: "Boat tour" },
     ],
   },
   {
@@ -34,11 +56,11 @@ export const provinceData = [
     name: "Battambang",
     type: "Art city",
     description: "A relaxed riverside city known for countryside rides, heritage buildings, and creative spaces.",
-    image: sunset,
+    image: btb,
     places: [
-      { name: "Bamboo Train", detail: "A unique open-air ride through villages and rice fields on a simple rail platform.", image: beach, tag: "Local", bestFor: "Adventure" },
-      { name: "Ek Phnom", detail: "An atmospheric temple site with a calm setting and rich historical presence.", image: mountain, tag: "Temple", bestFor: "History" },
-      { name: "Colonial Quarter", detail: "A heritage street area with old buildings, cafes, and a slow city rhythm.", image: phnom, tag: "Urban", bestFor: "Walks" },
+      { name: "Bamboo Train", detail: "A unique open-air ride through villages and rice fields on a simple rail platform.", image: placeImages.bambooBrain, tag: "Local", bestFor: "Adventure" },
+      { name: "Ek Phnom", detail: "An atmospheric temple site with a calm setting and rich historical presence.", image: placeImages.ekPhnom, tag: "Temple", bestFor: "History" },
+      { name: "Colonial Quarter", detail: "A heritage street area with old buildings, cafes, and a slow city rhythm.", image: placeImages.colonialQuarter, tag: "Urban", bestFor: "Walks" },
     ],
   },
   {
@@ -46,11 +68,11 @@ export const provinceData = [
     name: "Preah Sihanouk",
     type: "Coastal province",
     description: "Cambodia's beach gateway with island access, turquoise water, and resort escapes.",
-    image: beach,
+    image: shv,
     places: [
-      { name: "Otres Beach", detail: "A laid-back beach strip for relaxed swimming, sunset bars, and soft sand walks.", image: beach, tag: "Beach", bestFor: "Relaxing" },
-      { name: "Koh Rong Pier", detail: "The departure point to island adventures, snorkeling, and overnight sea trips.", image: sunset, tag: "Island", bestFor: "Boating" },
-      { name: "Serendipity Beach", detail: "A classic stop for coastal dining, sea views, and easy evening movement.", image: phnom, tag: "Shore", bestFor: "Dining" },
+      { name: "Otres Beach", detail: "A laid-back beach strip for relaxed swimming, sunset bars, and soft sand walks.", image: placeImages.otresBeach, tag: "Beach", bestFor: "Relaxing" },
+      { name: "Koh Rong Pier", detail: "The departure point to island adventures, snorkeling, and overnight sea trips.", image: placeImages.kohRongPier, tag: "Island", bestFor: "Boating" },
+      { name: "Serendipity Beach", detail: "A classic stop for coastal dining, sea views, and easy evening movement.", image: placeImages.serendipityBeach, tag: "Shore", bestFor: "Dining" },
     ],
   },
   {
@@ -58,11 +80,11 @@ export const provinceData = [
     name: "Kampot",
     type: "Riverside province",
     description: "A scenic stop with pepper farms, river views, and mountain escapes nearby.",
-    image: mountain,
+    image: kp,
     places: [
-      { name: "Bokor Hill Station", detail: "A misty highland escape with colonial ruins, cool weather, and panoramic views.", image: mountain, tag: "Highland", bestFor: "Day trip" },
-      { name: "Pepper Plantation", detail: "Learn how Kampot pepper is grown and harvest fresh flavors at source.", image: beach, tag: "Farm", bestFor: "Local taste" },
-      { name: "Kampot River", detail: "Calm waters, sunset cruises, and a relaxed town edge for visitors.", image: sunset, tag: "River", bestFor: "Cruise" },
+      { name: "Bokor Hill Station", detail: "A misty highland escape with colonial ruins, cool weather, and panoramic views.", image: placeImages.bokorHillStation, tag: "Highland", bestFor: "Day trip" },
+      { name: "Pepper Plantation", detail: "Learn how Kampot pepper is grown and harvest fresh flavors at source.", image: placeImages.pepperPlantation, tag: "Farm", bestFor: "Local taste" },
+      { name: "Kampot River", detail: "Calm waters, sunset cruises, and a relaxed town edge for visitors.", image: placeImages.kampotRiver, tag: "River", bestFor: "Cruise" },
     ],
   },
   {
@@ -70,11 +92,11 @@ export const provinceData = [
     name: "Kep",
     type: "Small coastal town",
     description: "A quiet seaside area known for crab markets, fresh seafood, and a gentle coastline.",
-    image: sunset,
+    image: kep,
     places: [
-      { name: "Kep Crab Market", detail: "Fresh seafood stalls and the best place to try the province's signature crab dishes.", image: sunset, tag: "Market", bestFor: "Seafood" },
-      { name: "Kep National Park", detail: "A breezy walking area with viewpoints, forest paths, and wildlife moments.", image: mountain, tag: "Nature", bestFor: "Walking" },
-      { name: "Koh Tonsay", detail: "A small island escape with quiet beaches and simple overnight stays.", image: beach, tag: "Island", bestFor: "Relaxing" },
+      { name: "Kep Crab Market", detail: "Fresh seafood stalls and the best place to try the province's signature crab dishes.", image: placeImages.kepCrabMarket, tag: "Market", bestFor: "Seafood" },
+      { name: "Kep National Park", detail: "A breezy walking area with viewpoints, forest paths, and wildlife moments.", image: placeImages.kepNationalPark, tag: "Nature", bestFor: "Walking" },
+      { name: "Koh Tonsay", detail: "A small island escape with quiet beaches and simple overnight stays.", image: placeImages.kohTonsay, tag: "Island", bestFor: "Relaxing" },
     ],
   },
   {
@@ -82,11 +104,11 @@ export const provinceData = [
     name: "Koh Kong",
     type: "Eco province",
     description: "A wild green province with rivers, mangroves, and deep-forest escapes.",
-    image: beach,
+    image: kk,
     places: [
-      { name: "Tatai Waterfall", detail: "A scenic river-and-waterfall stop surrounded by jungle and calm water activities.", image: mountain, tag: "Waterfall", bestFor: "Nature" },
-      { name: "Cardamom Mountains", detail: "One of Southeast Asia's major rainforest regions for trekking and eco-lodges.", image: beach, tag: "Jungle", bestFor: "Trekking" },
-      { name: "Mangrove Channel", detail: "A quiet ecological route with boat rides and river wildlife along the coast.", image: sunset, tag: "Eco", bestFor: "Boating" },
+      { name: "Tatai Waterfall", detail: "A scenic river-and-waterfall stop surrounded by jungle and calm water activities.", image: placeImages.tataiWaterfall, tag: "Waterfall", bestFor: "Nature" },
+      { name: "Cardamom Mountains", detail: "One of Southeast Asia's major rainforest regions for trekking and eco-lodges.", image: placeImages.cardamomMountains, tag: "Jungle", bestFor: "Trekking" },
+      { name: "Mangrove Channel", detail: "A quiet ecological route with boat rides and river wildlife along the coast.", image: placeImages.mangroveChannel, tag: "Eco", bestFor: "Boating" },
     ],
   },
   {
@@ -94,11 +116,11 @@ export const provinceData = [
     name: "Takeo",
     type: "Historical province",
     description: "An easygoing region with ancient temples, canals, and countryside heritage.",
-    image: phnom,
+    image: tk,
     places: [
-      { name: "Phnom Chisor", detail: "A hilltop temple complex with long stairways and sweeping farmland views.", image: mountain, tag: "Temple", bestFor: "Viewpoint" },
-      { name: "Angkor Borei", detail: "A historical area tied to early Khmer civilization and river routes.", image: beach, tag: "Archaeology", bestFor: "Culture" },
-      { name: "Tonle Bati", detail: "A calm lakeside stop with local food, temple visits, and easy day-trip energy.", image: sunset, tag: "Lake", bestFor: "Picnic" },
+      { name: "Phnom Chisor", detail: "A hilltop temple complex with long stairways and sweeping farmland views.", image: placeImages.phnomChisor, tag: "Temple", bestFor: "Viewpoint" },
+      { name: "Angkor Borei", detail: "A historical area tied to early Khmer civilization and river routes.", image: placeImages.angkorBorei, tag: "Archaeology", bestFor: "Culture" },
+      { name: "Tonle Bati", detail: "A calm lakeside stop with local food, temple visits, and easy day-trip energy.", image: placeImages.tonleBati, tag: "Lake", bestFor: "Picnic" },
     ],
   },
   {
@@ -106,11 +128,11 @@ export const provinceData = [
     name: "Kandal",
     type: "River province",
     description: "A surrounding province with easy access to island villages and hilltop pagodas.",
-    image: beach,
+    image: kd,
     places: [
-      { name: "Silk Island", detail: "Traditional weaving villages, local crafts, and quiet Mekong-side scenery.", image: beach, tag: "Craft", bestFor: "Day trip" },
-      { name: "Udong Mountain", detail: "A former royal capital area with stupas, views, and a peaceful climb.", image: mountain, tag: "Royal", bestFor: "History" },
-      { name: "Mekong Village", detail: "A soft rural route near the capital for river scenery and local life.", image: sunset, tag: "Village", bestFor: "Exploring" },
+      { name: "Silk Island", detail: "Traditional weaving villages, local crafts, and quiet Mekong-side scenery.", image: placeImages.silkIsland, tag: "Craft", bestFor: "Day trip" },
+      { name: "Udong Mountain", detail: "A former royal capital area with stupas, views, and a peaceful climb.", image: placeImages.udongMountain, tag: "Royal", bestFor: "History" },
+      { name: "Mekong Village", detail: "A soft rural route near the capital for river scenery and local life.", image: placeImages.mekongVillage, tag: "Village", bestFor: "Exploring" },
     ],
   },
   {
@@ -118,11 +140,11 @@ export const provinceData = [
     name: "Prey Veng",
     type: "Mekong province",
     description: "A river-fed region with old temples, village culture, and agricultural scenery.",
-    image: sunset,
+    image: pv,
     places: [
-      { name: "Ba Phnom", detail: "A historic hill area with temple ruins and a significant local spiritual role.", image: mountain, tag: "Temple", bestFor: "Pilgrimage" },
-      { name: "Mekong Riverside", detail: "A simple and peaceful route to experience rural river life and sunsets.", image: sunset, tag: "River", bestFor: "Evening" },
-      { name: "Rice Fields", detail: "A seasonal landscape that shows the province's farming side and open horizon.", image: beach, tag: "Rural", bestFor: "Photography" },
+      { name: "Ba Phnom", detail: "A historic hill area with temple ruins and a significant local spiritual role.", image: placeImages.baPhnom, tag: "Temple", bestFor: "Pilgrimage" },
+      { name: "Mekong Riverside", detail: "A simple and peaceful route to experience rural river life and sunsets.", image: placeImages.mekongRiverside, tag: "River", bestFor: "Evening" },
+      { name: "Rice Fields", detail: "A seasonal landscape that shows the province's farming side and open horizon.", image: placeImages.riceFields, tag: "Rural", bestFor: "Photography" },
     ],
   },
   {
@@ -130,11 +152,11 @@ export const provinceData = [
     name: "Svay Rieng",
     type: "Border province",
     description: "A lowland province near Vietnam with strong market culture and practical travel links.",
-    image: phnom,
+    image: svr,
     places: [
-      { name: "Bavet Market", detail: "A lively border town stop with shopping, food, and quick local movement.", image: phnom, tag: "Market", bestFor: "Border stop" },
-      { name: "Svay Rieng Pagoda", detail: "A calm local temple visit with traditional design and community atmosphere.", image: beach, tag: "Pagoda", bestFor: "Short visit" },
-      { name: "Village Canal", detail: "A relaxed waterway route through the province's farming and residential zones.", image: sunset, tag: "Canal", bestFor: "Local life" },
+      { name: "Bavet Market", detail: "A lively border town stop with shopping, food, and quick local movement.", image: placeImages.bavetMarket, tag: "Market", bestFor: "Border stop" },
+      { name: "Svay Rieng Pagoda", detail: "A calm local temple visit with traditional design and community atmosphere.", image: placeImages.svayRiengPagoda, tag: "Pagoda", bestFor: "Short visit" },
+      { name: "Village Canal", detail: "A relaxed waterway route through the province's farming and residential zones.", image: placeImages.villageCanal, tag: "Canal", bestFor: "Local life" },
     ],
   },
   {
@@ -142,11 +164,11 @@ export const provinceData = [
     name: "Kampong Cham",
     type: "Riverside province",
     description: "A classic stop on the Mekong with bridges, temples, and village scenery.",
-    image: sunset,
+    image: kpc,
     places: [
-      { name: "Ko Paen Bamboo Bridge", detail: "A seasonal bamboo crossing that gives a memorable local travel experience.", image: sunset, tag: "Bridge", bestFor: "Photo stop" },
-      { name: "Wat Nokor", detail: "A temple complex combining old ruins with active worship spaces.", image: angkorWat, tag: "Temple", bestFor: "Heritage" },
-      { name: "Mekong Island", detail: "A peaceful island side of the river with cycling and local homes.", image: beach, tag: "Island", bestFor: "Cycling" },
+      { name: "Ko Paen Bamboo Bridge", detail: "A seasonal bamboo crossing that gives a memorable local travel experience.", image: placeImages.koPaenBambooBridge, tag: "Bridge", bestFor: "Photo stop" },
+      { name: "Wat Nokor", detail: "A temple complex combining old ruins with active worship spaces.", image: placeImages.watNokor, tag: "Temple", bestFor: "Heritage" },
+      { name: "Mekong Island", detail: "A peaceful island side of the river with cycling and local homes.", image: placeImages.mekongIsland, tag: "Island", bestFor: "Cycling" },
     ],
   },
   {
@@ -154,11 +176,11 @@ export const provinceData = [
     name: "Kampong Chhnang",
     type: "Water province",
     description: "Known for floating communities and pottery villages along the lake routes.",
-    image: beach,
+    image: kc,
     places: [
-      { name: "Floating Village", detail: "Homes, boats, and daily life on the water create a distinct travel scene.", image: beach, tag: "Lake", bestFor: "Boat tour" },
-      { name: "Pottery Village", detail: "Traditional clay work and local craftmaking using methods passed through generations.", image: phnom, tag: "Craft", bestFor: "Workshop" },
-      { name: "Lake Road", detail: "A scenic route for photography and observing the province's water-based life.", image: sunset, tag: "Scenic", bestFor: "Drive" },
+      { name: "Floating Village", detail: "Homes, boats, and daily life on the water create a distinct travel scene.", image: placeImages.floatingVillage, tag: "Lake", bestFor: "Boat tour" },
+      { name: "Pottery Village", detail: "Traditional clay work and local craftmaking using methods passed through generations.", image: placeImages.potteryVillage, tag: "Craft", bestFor: "Workshop" },
+      { name: "Lake Road", detail: "A scenic route for photography and observing the province's water-based life.", image: placeImages.lakeRoad, tag: "Scenic", bestFor: "Drive" },
     ],
   },
   {
@@ -166,11 +188,11 @@ export const provinceData = [
     name: "Kampong Speu",
     type: "Mountain province",
     description: "A green province with waterfalls, hill scenery, and easy routes from the capital.",
-    image: mountain,
+    image: ks,
     places: [
-      { name: "Phnom Aural", detail: "The highest peak in Cambodia, popular for trekking and cool-weather camping.", image: mountain, tag: "Peak", bestFor: "Trekking" },
-      { name: "Phnom Sruoch", detail: "A hilly retreat for scenic drives, forest stops, and fresh mountain air.", image: sunset, tag: "Highland", bestFor: "Road trip" },
-      { name: "Waterfall Trail", detail: "Short nature stops and weekend treks through the province's greener side.", image: beach, tag: "Nature", bestFor: "Hiking" },
+      { name: "Phnom Aural", detail: "The highest peak in Cambodia, popular for trekking and cool-weather camping.", image: placeImages.phnomAural, tag: "Peak", bestFor: "Trekking" },
+      { name: "Phnom Sruoch", detail: "A hilly retreat for scenic drives, forest stops, and fresh mountain air.", image: placeImages.phnomSruoch, tag: "Highland", bestFor: "Road trip" },
+      { name: "Waterfall Trail", detail: "Short nature stops and weekend treks through the province's greener side.", image: placeImages.waterfallTrail, tag: "Nature", bestFor: "Hiking" },
     ],
   },
   {
@@ -178,11 +200,11 @@ export const provinceData = [
     name: "Pursat",
     type: "Nature province",
     description: "A quiet province with jungle foothills, reservoir views, and slow-travel appeal.",
-    image: sunset,
+    image: ps,
     places: [
-      { name: "Cardamom Foothills", detail: "A greener side of Cambodia with trekking routes and wildlife viewpoints.", image: mountain, tag: "Nature", bestFor: "Eco travel" },
-      { name: "Peam Bang", detail: "A waterside village area that feels remote, calm, and photogenic.", image: beach, tag: "Water", bestFor: "Boat ride" },
-      { name: "Reservoir View", detail: "Quiet open water views and a peaceful stop for a slow paced day.", image: sunset, tag: "Scenic", bestFor: "Relaxing" },
+      { name: "Cardamom Foothills", detail: "A greener side of Cambodia with trekking routes and wildlife viewpoints.", image: placeImages.cardamomFoothills, tag: "Nature", bestFor: "Eco travel" },
+      { name: "Peam Bang", detail: "A waterside village area that feels remote, calm, and photogenic.", image: placeImages.peamBang, tag: "Water", bestFor: "Boat ride" },
+      { name: "Reservoir View", detail: "Quiet open water views and a peaceful stop for a slow paced day.", image: placeImages.reservoirView, tag: "Scenic", bestFor: "Relaxing" },
     ],
   },
   {
@@ -190,11 +212,11 @@ export const provinceData = [
     name: "Banteay Meanchey",
     type: "Gateway province",
     description: "A western gateway province with temple heritage and border-town movement.",
-    image: angkorWat,
+    image: btm,
     places: [
-      { name: "Banteay Chhmar", detail: "A large temple complex with impressive carvings and a less crowded experience.", image: angkorWat, tag: "Temple", bestFor: "History" },
-      { name: "Poipet Gateway", detail: "A border transit hub where travel, trade, and movement meet.", image: phnom, tag: "Border", bestFor: "Transit" },
-      { name: "Rice Border Plains", detail: "Open countryside that frames the province's western horizon.", image: sunset, tag: "Rural", bestFor: "Drive" },
+      { name: "Banteay Chhmar", detail: "A large temple complex with impressive carvings and a less crowded experience.", image: placeImages.banteayChomar, tag: "Temple", bestFor: "History" },
+      { name: "Poipet Gateway", detail: "A border transit hub where travel, trade, and movement meet.", image: placeImages.poipetGateway, tag: "Border", bestFor: "Transit" },
+      { name: "Rice Border Plains", detail: "Open countryside that frames the province's western horizon.", image: placeImages.riceBorderPlains, tag: "Rural", bestFor: "Drive" },
     ],
   },
   {
@@ -202,11 +224,11 @@ export const provinceData = [
     name: "Oddar Meanchey",
     type: "Northern province",
     description: "A quieter border province with historical sites and broad countryside.",
-    image: beach,
+    image: odm,
     places: [
-      { name: "Anlong Veng", detail: "A historically significant area tied to Cambodia's recent past and local memory.", image: beach, tag: "History", bestFor: "Learning" },
-      { name: "Ta Mok Tomb", detail: "A notable historical site that draws travelers interested in modern Cambodian history.", image: sunset, tag: "Site", bestFor: "Culture" },
-      { name: "Forest Road", detail: "A remote-feeling route through northern countryside and low hills.", image: mountain, tag: "Route", bestFor: "Exploring" },
+      { name: "Anlong Veng", detail: "A historically significant area tied to Cambodia's recent past and local memory.", image: placeImages.alongVeng, tag: "History", bestFor: "Learning" },
+      { name: "Ta Mok Tomb", detail: "A notable historical site that draws travelers interested in modern Cambodian history.", image: placeImages.taMokTomb, tag: "Site", bestFor: "Culture" },
+      { name: "Forest Road", detail: "A remote-feeling route through northern countryside and low hills.", image: placeImages.forestRoad, tag: "Route", bestFor: "Exploring" },
     ],
   },
   {
@@ -214,11 +236,11 @@ export const provinceData = [
     name: "Preah Vihear",
     type: "Temple province",
     description: "A dramatic northern province famous for mountain temples and expansive landscapes.",
-    image: mountain,
+    image: ph,
     places: [
-      { name: "Preah Vihear Temple", detail: "A hilltop UNESCO temple with unforgettable cliff-edge views.", image: mountain, tag: "UNESCO", bestFor: "Landmark" },
-      { name: "Koh Ker", detail: "A remote temple group with a giant pyramid and forested ruins.", image: angkorWat, tag: "Archaeology", bestFor: "Exploration" },
-      { name: "Northern Plateau", detail: "High landscape routes and quiet travel scenes that feel very open and wild.", image: sunset, tag: "Highland", bestFor: "Road trip" },
+      { name: "Preah Vihear Temple", detail: "A hilltop UNESCO temple with unforgettable cliff-edge views.", image: placeImages.preahVihearTemple, tag: "UNESCO", bestFor: "Landmark" },
+      { name: "Koh Ker", detail: "A remote temple group with a giant pyramid and forested ruins.", image: placeImages.kohKer, tag: "Archaeology", bestFor: "Exploration" },
+      { name: "Northern Plateau", detail: "High landscape routes and quiet travel scenes that feel very open and wild.", image: placeImages.northernPlateau, tag: "Highland", bestFor: "Road trip" },
     ],
   },
   {
@@ -226,11 +248,11 @@ export const provinceData = [
     name: "Stung Treng",
     type: "Mekong province",
     description: "A north-east river province known for wetlands, dolphins, and soft adventure.",
-    image: sunset,
+    image: st,
     places: [
-      { name: "Mekong Wetlands", detail: "A calm area for boat travel, birdwatching, and river ecology.", image: beach, tag: "Wetland", bestFor: "Eco tour" },
-      { name: "Dolphin Waters", detail: "Riverside zones where rare freshwater dolphin sightings are possible nearby.", image: sunset, tag: "Wildlife", bestFor: "Boat ride" },
-      { name: "Island Channels", detail: "A scenic network of river islands and waterways for a slower experience.", image: phnom, tag: "Island", bestFor: "Cruise" },
+      { name: "Mekong Wetlands", detail: "A calm area for boat travel, birdwatching, and river ecology.", image: placeImages.mekongWetlands, tag: "Wetland", bestFor: "Eco tour" },
+      { name: "Dolphin Waters", detail: "Riverside zones where rare freshwater dolphin sightings are possible nearby.", image: placeImages.dolphinWaters, tag: "Wildlife", bestFor: "Boat ride" },
+      { name: "Island Channels", detail: "A scenic network of river islands and waterways for a slower experience.", image: placeImages.islandChannels, tag: "Island", bestFor: "Cruise" },
     ],
   },
   {
@@ -238,11 +260,11 @@ export const provinceData = [
     name: "Kratie",
     type: "River town",
     description: "A laid-back province with island life, old buildings, and dolphin watching.",
-    image: beach,
+    image: kt,
     places: [
-      { name: "Kampi Dolphin Pool", detail: "One of the best places to look for Irrawaddy dolphins on the Mekong.", image: beach, tag: "Wildlife", bestFor: "Boat tour" },
-      { name: "Koh Trong", detail: "A peaceful island with bicycle routes, local homestays, and river sunsets.", image: sunset, tag: "Island", bestFor: "Cycling" },
-      { name: "French Quarter", detail: "A small historic town area with old facades and slow river-town mood.", image: phnom, tag: "Heritage", bestFor: "Walks" },
+      { name: "Kampi Dolphin Pool", detail: "One of the best places to look for Irrawaddy dolphins on the Mekong.", image: placeImages.kampiDolphinPool, tag: "Wildlife", bestFor: "Boat tour" },
+      { name: "Koh Trong", detail: "A peaceful island with bicycle routes, local homestays, and river sunsets.", image: placeImages.kohTrong, tag: "Island", bestFor: "Cycling" },
+      { name: "French Quarter", detail: "A small historic town area with old facades and slow river-town mood.", image: placeImages.frenchQuarter, tag: "Heritage", bestFor: "Walks" },
     ],
   },
   {
@@ -250,11 +272,11 @@ export const provinceData = [
     name: "Mondulkiri",
     type: "Highland province",
     description: "Cambodia's eastern highlands feature waterfalls, cool air, and outdoor adventure.",
-    image: mountain,
+    image: mdk,
     places: [
-      { name: "Bou Sra Waterfall", detail: "A powerful waterfall set in a forested highland landscape.", image: mountain, tag: "Waterfall", bestFor: "Nature" },
-      { name: "Elephant Valley", detail: "A sanctuary-focused experience centered on ethical wildlife observation.", image: beach, tag: "Sanctuary", bestFor: "Wildlife" },
-      { name: "Pine Hills", detail: "Cooler upland scenery with gentle slopes and wide skies.", image: sunset, tag: "Highland", bestFor: "Relaxing" },
+      { name: "Bou Sra Waterfall", detail: "A powerful waterfall set in a forested highland landscape.", image: placeImages.bouSraWaterfall, tag: "Waterfall", bestFor: "Nature" },
+      { name: "Elephant Valley", detail: "A sanctuary-focused experience centered on ethical wildlife observation.", image: placeImages.elephantValley, tag: "Sanctuary", bestFor: "Wildlife" },
+      { name: "Pine Hills", detail: "Cooler upland scenery with gentle slopes and wide skies.", image: placeImages.pineHills, tag: "Highland", bestFor: "Relaxing" },
     ],
   },
   {
@@ -262,11 +284,11 @@ export const provinceData = [
     name: "Ratanakiri",
     type: "Remote province",
     description: "A wilderness region with crater lakes, ethnic culture, and untouched forest routes.",
-    image: sunset,
+    image: rtk,
     places: [
-      { name: "Yeak Loam Lake", detail: "A beautiful volcanic lake with clear water and forest surroundings.", image: beach, tag: "Lake", bestFor: "Swimming" },
-      { name: "Virachey National Park", detail: "A large protected area for jungle trekking and deep eco travel.", image: mountain, tag: "National park", bestFor: "Trekking" },
-      { name: "Brok Village", detail: "A cultural stop to learn about local communities and regional traditions.", image: phnom, tag: "Culture", bestFor: "Learning" },
+      { name: "Yeak Loam Lake", detail: "A beautiful volcanic lake with clear water and forest surroundings.", image: placeImages.yeakLoamLake, tag: "Lake", bestFor: "Swimming" },
+      { name: "Virachey National Park", detail: "A large protected area for jungle trekking and deep eco travel.", image: placeImages.viracheyNationalPark, tag: "National park", bestFor: "Trekking" },
+      { name: "Brok Village", detail: "A cultural stop to learn about local communities and regional traditions.", image: placeImages.brokVillage, tag: "Culture", bestFor: "Learning" },
     ],
   },
   {
@@ -274,11 +296,11 @@ export const provinceData = [
     name: "Tboung Khmum",
     type: "Agricultural province",
     description: "A newer province with quiet roads, farming land, and local temple stops.",
-    image: phnom,
+    image: tb,
     places: [
-      { name: "Memot Plantation", detail: "A rural landscape with rubber estates and classic east-Cambodia scenery.", image: phnom, tag: "Rural", bestFor: "Road trip" },
-      { name: "Tonle Bet", detail: "A local gateway area with everyday markets and cross-border movement.", image: sunset, tag: "Town", bestFor: "Local stop" },
-      { name: "Village Route", detail: "An easy travel loop with fields and local roadside food stops.", image: beach, tag: "Farm", bestFor: "Driving" },
+      { name: "Memot Plantation", detail: "A rural landscape with rubber estates and classic east-Cambodia scenery.", image: placeImages.memotPlantation, tag: "Rural", bestFor: "Road trip" },
+      { name: "Tonle Bet", detail: "A local gateway area with everyday markets and cross-border movement.", image: placeImages.tonleBet, tag: "Town", bestFor: "Local stop" },
+      { name: "Village Route", detail: "An easy travel loop with fields and local roadside food stops.", image: placeImages.villageRoute, tag: "Farm", bestFor: "Driving" },
     ],
   },
   {
@@ -286,11 +308,11 @@ export const provinceData = [
     name: "Pailin",
     type: "Gem province",
     description: "A western province with gem history, hills, and a slower provincial rhythm.",
-    image: mountain,
+    image: pl,
     places: [
-      { name: "Phnom Yat", detail: "A hillside temple with a panoramic view over the town and nearby hills.", image: mountain, tag: "Hill", bestFor: "Viewpoint" },
-      { name: "Pailin Gem Fields", detail: "Historic gemstone areas that shaped the region's identity and trade.", image: beach, tag: "Heritage", bestFor: "Learning" },
-      { name: "Border Hills", detail: "A quiet scenic drive that shows the province's soft hilly landscape.", image: sunset, tag: "Scenic", bestFor: "Drive" },
+      { name: "Phnom Yat", detail: "A hillside temple with a panoramic view over the town and nearby hills.", image: placeImages.phnomYat, tag: "Hill", bestFor: "Viewpoint" },
+      { name: "Pailin Gem Fields", detail: "Historic gemstone areas that shaped the region's identity and trade.", image: placeImages.pailinGemFields, tag: "Heritage", bestFor: "Learning" },
+      { name: "Border Hills", detail: "A quiet scenic drive that shows the province's soft hilly landscape.", image: placeImages.borderHills, tag: "Scenic", bestFor: "Drive" },
     ],
   },
   {
@@ -298,11 +320,11 @@ export const provinceData = [
     name: "Kampong Thom",
     type: "Central province",
     description: "A central stop with ancient temple complexes and broad countryside drives.",
-    image: angkorWat,
+    image: kpt,
     places: [
-      { name: "Sambor Prei Kuk", detail: "A pre-Angkor temple complex and UNESCO World Heritage destination.", image: angkorWat, tag: "UNESCO", bestFor: "History" },
-      { name: "Stung Sen", detail: "A river region with calm scenery and easy access to local town life.", image: sunset, tag: "River", bestFor: "Relaxing" },
-      { name: "Old Market", detail: "A local center where daily life, food, and simple travel meet.", image: phnom, tag: "Market", bestFor: "Walking" },
+      { name: "Sambor Prei Kuk", detail: "A pre-Angkor temple complex and UNESCO World Heritage destination.", image: placeImages.samborPreiKuk, tag: "UNESCO", bestFor: "History" },
+      { name: "Stung Sen", detail: "A river region with calm scenery and easy access to local town life.", image: placeImages.stungSen, tag: "River", bestFor: "Relaxing" },
+      { name: "Old Market", detail: "A local center where daily life, food, and simple travel meet.", image: placeImages.oldMarket, tag: "Market", bestFor: "Walking" },
     ],
   },
 ];
