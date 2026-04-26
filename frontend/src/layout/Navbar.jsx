@@ -18,8 +18,8 @@ export default function Navbar() {
           <NavLink to="/contact" className={({ isActive }) => (isActive ? "is-current" : "")}>Contact</NavLink>
         </nav>
         <div className="nav-actions">
-          <Link className="nav-login" to="/about">Log in</Link>
-          <Link className="nav-cta" to="/tours">Sign in</Link>
+          <Link className="nav-login" to="/login">Log in</Link>
+          <Link className="nav-cta" to="/signup">Sign up</Link>
         </div>
       </div>
     </header>
