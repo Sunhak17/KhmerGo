@@ -23,7 +23,7 @@ export default function ServiceDetail() {
       <section className="service-page service-detail-view">
         <div className="container service-shell">
           <div className="province-page-back">
-            <Link to={`/tours`}>Back to services</Link>
+            <Link to={`/tours/${safeSection.id}`}>Back to {safeSection.province} hotels</Link>
           </div>
 
           <section className="province-detail-panel service-detail-panel">

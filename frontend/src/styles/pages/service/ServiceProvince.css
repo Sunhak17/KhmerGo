@@ -1,0 +1,24 @@
+.service-province-view .province-page-back {
+  margin-bottom: -4px;
+}
+
+.service-province-view .province-page-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f2ac08;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .service-province-view .service-stay-grid--full {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .service-province-view .service-stay-grid--full {
+    grid-template-columns: 1fr;
+  }
+}

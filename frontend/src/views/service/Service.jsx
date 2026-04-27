@@ -5,6 +5,8 @@ import Footer from "../../layout/Footer";
 import { serviceByProvince, slugify } from "../../data/serviceData";
 import "../../styles/pages/service/Service.css";
 
+const PREVIEW_STAY_COUNT = 2;
+
 export default function Service() {
   return (
     <div className="app-wrapper">
@@ -32,7 +34,7 @@ export default function Service() {
                 </div>
 
                 <div className="service-stay-grid">
-                  {section.stays.map((stay) => (
+                  {section.stays.slice(0, PREVIEW_STAY_COUNT).map((stay) => (
                     <article key={stay.id} className="service-stay-card">
                       <img src={stay.image} alt={stay.name} />
                       <div className="service-stay-body">
@@ -54,6 +56,12 @@ export default function Service() {
                       </div>
                     </article>
                   ))}
+                </div>
+
+                <div className="service-province-actions">
+                  <Link className="service-view-more-link" to={`/tours/${section.id}`}>
+                    View more hotels in {section.province}
+                  </Link>
                 </div>
               </section>
             ))}

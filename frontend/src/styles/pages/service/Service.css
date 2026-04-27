@@ -169,6 +169,35 @@
   text-transform: uppercase;
 }
 
+.service-province-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service-view-more-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: 1px solid rgba(242, 172, 8, 0.46);
+  color: #f4bc2f;
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.service-view-more-link:hover {
+  color: #101926;
+  background: linear-gradient(135deg, #f4bc2f, #f2ac08);
+}
+
+.service-stay-grid--full {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 900px) {
   .service-stay-grid {
     grid-template-columns: 1fr;
@@ -176,5 +205,9 @@
 
   .service-province-head {
     flex-direction: column;
+  }
+
+  .service-province-actions {
+    justify-content: flex-start;
   }
 }
