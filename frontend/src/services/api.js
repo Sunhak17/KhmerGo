@@ -63,3 +63,13 @@ export function slugify(value) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+// API wrapper object with common HTTP methods
+const api = {
+  get: (path) => fetchJson(path, { auth: true }),
+  post: (path, data) => fetchJson(path, { auth: true, method: "POST", body: JSON.stringify(data) }),
+  put: (path, data) => fetchJson(path, { auth: true, method: "PUT", body: JSON.stringify(data) }),
+  delete: (path) => fetchJson(path, { auth: true, method: "DELETE" }),
+};
+
+export default api;

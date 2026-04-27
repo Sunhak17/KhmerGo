@@ -7,6 +7,14 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || "").trim());
 }
 
+function getBearerToken(headerValue) {
+  const value = String(headerValue || "").trim();
+  if (!value.startsWith("Bearer ")) {
+    return null;
+  }
+  return value.slice("Bearer ".length).trim() || null;
+}
+
 function formatStay(row) {
   const priceMin = row.price_min == null ? null : Number(row.price_min);
   const priceMax = row.price_max == null ? null : Number(row.price_max);
@@ -34,5 +42,6 @@ function formatStay(row) {
 module.exports = {
   toNumber,
   isValidEmail,
+  getBearerToken,
   formatStay,
 };

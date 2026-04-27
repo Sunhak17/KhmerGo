@@ -121,6 +121,24 @@
   filter: brightness(1.05);
 }
 
+.nav-admin {
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(245, 247, 251, 0.9);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-admin:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(245, 247, 251, 1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding-top: 4px;

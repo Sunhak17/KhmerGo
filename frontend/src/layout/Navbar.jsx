@@ -54,7 +54,12 @@ export default function Navbar() {
         </nav>
         <div className="nav-actions">
           {user ? (
-            <Link className="nav-cta" to="/profile">Profile</Link>
+            <>
+              {user.role === 'admin' && (
+                <a className="nav-admin" href="http://localhost:5174" target="_blank" rel="noopener noreferrer">Admin</a>
+              )}
+              <Link className="nav-cta" to="/profile">Profile</Link>
+            </>
           ) : (
             <>
               <Link className="nav-login" to="/login">Log in</Link>

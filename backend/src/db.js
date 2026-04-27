@@ -17,7 +17,12 @@ async function testDatabaseConnection() {
   }
 }
 
+async function query(sql, values = []) {
+  return pool.query(sql, values);
+}
+
 module.exports = {
   pool,
+  query,
   testDatabaseConnection,
 };
