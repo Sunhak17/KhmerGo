@@ -1,16 +1,47 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
-import { getHotelStaysByProvince, serviceByProvince, slugify } from "../../data/serviceData";
+import { fetchJson, resolveAssetUrl } from "../../services/api";
 import "../../styles/pages/service/ServiceProvince.css";
 
 export default function ServiceProvince() {
   const { provinceId } = useParams();
-  const { section, hotels } = getHotelStaysByProvince(provinceId);
+  const [section, setSection] = useState(null);
+  const [hotels, setHotels] = useState([]);
 
-  const safeSection = section ?? serviceByProvince[0];
-  const safeHotels = hotels.length > 0 ? hotels : safeSection.stays.filter((stay) => stay.type === "Hotel");
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadHotelsByProvince() {
+      try {
+        const [provinceData, hotelsData] = await Promise.all([
+          fetchJson(`/provinces/${provinceId}`),
+          fetchJson(`/provinces/${provinceId}/stays?type=Hotel`),
+        ]);
+
+        if (isMounted) {
+          setSection({
+            id: provinceData.id,
+            province: provinceData.name,
+          });
+          setHotels(hotelsData);
+        }
+      } catch (error) {
+        if (isMounted) {
+          console.error(error);
+          setSection(null);
+          setHotels([]);
+        }
+      }
+    }
+
+    loadHotelsByProvince();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [provinceId]);
 
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -27,17 +58,17 @@ export default function ServiceProvince() {
 
           <header className="service-header">
             <p className="service-kicker">Hotels by province</p>
-            <h1>{safeSection.province} Hotels</h1>
+            <h1>{section?.province || "Province"} Hotels</h1>
             <p>
-              Explore all available hotel options in {safeSection.province}. Choose one to view full details, pricing,
+              Explore all available hotel options in {section?.province || "this province"}. Choose one to view full details, pricing,
               and stay highlights.
             </p>
           </header>
 
           <div className="service-stay-grid service-stay-grid--full">
-            {safeHotels.map((stay) => (
+            {hotels.map((stay) => (
               <article key={stay.id} className="service-stay-card">
-                <img src={stay.image} alt={stay.name} />
+                <img src={resolveAssetUrl(stay.imageUrl || stay.image_url || stay.image)} alt={stay.name} />
                 <div className="service-stay-body">
                   <div className="service-stay-topline">
                     <span>{stay.type}</span>
@@ -47,7 +78,7 @@ export default function ServiceProvince() {
                   <p>{stay.detail}</p>
                   <div className="service-stay-meta">
                     <strong>{stay.range}</strong>
-                    <Link className="service-stay-link" to={`/tours/${safeSection.id}/${slugify(stay.name)}`}>
+                    <Link className="service-stay-link" to={`/tours/${provinceId}/${stay.slug}`}>
                       View Detail
                     </Link>
                   </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { slugify } from "../../data/destinationData";
+import { resolveAssetUrl, slugify } from "../../services/api";
 import "../../styles/pages/destination/PlaceCards.css";
 
 export default function PlaceCards({ province, onSelectPlace, activePlaceName }) {
@@ -13,10 +13,10 @@ export default function PlaceCards({ province, onSelectPlace, activePlaceName })
           <Link
             key={place.name}
             className={`place-card-tile${isActive ? " is-active" : ""}`}
-            to={`/destinations/${province.id}/${slugify(place.name)}`}
+            to={`/destinations/${province.id}/${place.slug || slugify(place.name)}`}
             aria-label={`Open ${place.name}`}
           >
-            <img src={place.image} alt={place.name} className="place-card-image" />
+            <img src={resolveAssetUrl(place.imageUrl || place.image_url || place.image)} alt={place.name} className="place-card-image" />
             <div className="place-card-overlay" />
             <div className="place-card-text">
               <span>{place.tag}</span>

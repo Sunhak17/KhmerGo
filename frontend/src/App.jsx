@@ -10,6 +10,7 @@ import ServiceProvince from "./views/service/ServiceProvince";
 import ServiceDetail from "./views/service/ServiceDetail";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import Profile from "./views/Profile";
 import LoginPage from "./views/auth/LoginPage";
 import SignupPage from "./views/auth/SignupPage";
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/tours/:provinceId/:staySlug" element={<ServiceDetail />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

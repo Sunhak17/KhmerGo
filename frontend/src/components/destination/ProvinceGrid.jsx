@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { resolveAssetUrl } from "../../services/api";
 import "../../styles/pages/destination/ProvinceGrid.css";
 
 export default function ProvinceGrid({ provinces, activeProvinceId, onSelectProvince }) {
@@ -16,7 +17,11 @@ export default function ProvinceGrid({ provinces, activeProvinceId, onSelectProv
             to={`/destinations/${province.id}`}
             aria-label={`Open ${province.name}`}
           >
-            <img src={province.image} alt={province.name} className="province-tile-image" />
+            <img
+              src={resolveAssetUrl(province.imageUrl || province.image_url || province.image)}
+              alt={province.name}
+              className="province-tile-image"
+            />
             <div className="province-tile-overlay" />
             <div className="province-tile-content">
               <span className="province-tile-type">Province</span>
