@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/components/TourCard.css";
+import "../../../styles/components/TourCard.css";
 
 export default function TourCard({ tour }) {
   return (

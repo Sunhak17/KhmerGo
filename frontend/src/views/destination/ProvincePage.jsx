@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
-import PlaceCards from "./PlaceCards";
+import PlaceCards from "../../components/destination/PlaceCards";
 import { getProvinceById, provinceData } from "../../data/destinationData";
 import "../../styles/pages/destination/ProvincePage.css";
 
@@ -17,7 +17,7 @@ export default function ProvincePage() {
   return (
     <div className="app-wrapper">
       <Navbar />
-      <section className="destinations-page destinations-page--dark">
+      <section className="destinations-page destinations-page--dark province-page-view">
         <div className="container destinations-shell">
           <div className="province-page-back">
             <Link to="/destinations">Back to provinces</Link>

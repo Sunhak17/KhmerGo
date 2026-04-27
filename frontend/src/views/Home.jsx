@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../layout/Navbar";
 import Hero from "../layout/Hero";
-import PopularTours from "../components/PopularTours";
-import WhyUs from "../components/WhyUs";
+import PopularTours from "../components/home/PopularTours";
+import WhyUs from "../components/home/WhyUs";
 import Footer from "../layout/Footer";
 import "../styles/pages/Home.css";
 

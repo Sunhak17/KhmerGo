@@ -1,10 +1,10 @@
 import React from "react";
-import angkorWat from "../assets/images/slider/1.jpg";
-import kampot from "../assets/images/popular_tour/kampot.jpg";
-import wat_phnom from "../assets/images/popular_tour/wat_phnom.jpg";
-import slide4 from "../assets/images/slider/4.jpg";
-import bou_sra from "../assets/images/popular_tour/bou_sra.jpg";
-import "../styles/components/PopularTours.css";
+import angkorWat from "../../assets/images/slider/1.jpg";
+import kampot from "../../assets/images/popular_tour/kampot.jpg";
+import wat_phnom from "../../assets/images/popular_tour/wat_phnom.jpg";
+import slide4 from "../../assets/images/slider/4.jpg";
+import bou_sra from "../../assets/images/popular_tour/bou_sra.jpg";
+import "../../styles/components/PopularTours.css";
 
 export default function PopularTours() {
   const tours = [

@@ -20,7 +20,7 @@ export default function ServiceDetail() {
   return (
     <div className="app-wrapper">
       <Navbar />
-      <section className="service-page">
+      <section className="service-page service-detail-view">
         <div className="container service-shell">
           <div className="province-page-back">
             <Link to={`/tours`}>Back to services</Link>

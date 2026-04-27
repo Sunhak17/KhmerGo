@@ -17,7 +17,7 @@ export default function PlacePage() {
   return (
     <div className="app-wrapper">
       <Navbar />
-      <section className="destinations-page destinations-page--dark">
+      <section className="destinations-page destinations-page--dark place-page-view">
         <div className="container destinations-shell">
           <div className="province-page-back">
             <Link to={`/destinations/${province.id}`}>Back to {province.name}</Link>

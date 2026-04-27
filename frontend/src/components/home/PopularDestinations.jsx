@@ -1,9 +1,9 @@
 import React from "react";
-import DestinationCard from "./DestinationCard";
-import angkorWat from "../assets/images/slider/1.jpg";
-import phnom from "../assets/images/slider/2.jpg";
-import beach from "../assets/images/slider/3.jpg";
-import "../styles/components/PopularDestinations.css";
+import DestinationCard from "../shared/cards/DestinationCard";
+import angkorWat from "../../assets/images/slider/1.jpg";
+import phnom from "../../assets/images/slider/2.jpg";
+import beach from "../../assets/images/slider/3.jpg";
+import "../../styles/components/PopularDestinations.css";
 
 export default function PopularDestinations() {
   const destinations = [

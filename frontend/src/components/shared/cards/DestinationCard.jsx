@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/components/DestinationCard.css";
+import "../../../styles/components/DestinationCard.css";
 
 export default function DestinationCard({ destination }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/components/DestinationList.css";
+import "../../../styles/components/DestinationList.css";
 
 export default function DestinationList({ destinations }) {
   return (

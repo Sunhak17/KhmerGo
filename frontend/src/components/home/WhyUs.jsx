@@ -1,8 +1,8 @@
 import React from "react";
-import angkorWat from "../assets/images/slider/1.jpg";
-import pp from "../assets/images/pp.jpg";
-import royal_palace from "../assets/images/slider/3.jpg";
-import "../styles/components/WhyUs.css";
+import angkorWat from "../../assets/images/slider/1.jpg";
+import pp from "../../assets/images/pp.jpg";
+import royal_palace from "../../assets/images/slider/3.jpg";
+import "../../styles/components/WhyUs.css";
 
 export default function WhyUs() {
   return (
