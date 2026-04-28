@@ -36,6 +36,8 @@ function formatStay(row) {
         : null,
     image_url: row.image_url,
     imageUrl: row.image_url,
+    websiteUrl: row.website_url || null,
+    mapEmbed: row.map_embed || null,
   };
 }
 

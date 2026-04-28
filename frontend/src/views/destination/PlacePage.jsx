@@ -52,6 +52,12 @@ export default function PlacePage() {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [provinceId, placeSlug]);
 
+  function getMapSrc(value) {
+    if (!value) return null;
+    const match = value.match(/src=["']([^"']+)["']/);
+    return match ? match[1] : value.trim();
+  }
+
   return (
     <div className="app-wrapper">
       <Navbar />
@@ -88,8 +94,35 @@ export default function PlacePage() {
                 </div>
                 <h3>{place?.name || ""}</h3>
                 <p>{place?.detail || ""}</p>
+
+                {place?.websiteUrl && (
+                  <a
+                    href={place.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="place-detail-link"
+                  >
+                    Visit official site
+                  </a>
+                )}
               </div>
             </article>
+
+            {place?.mapEmbed && (
+              <div className="place-detail-map">
+                <h3>Location</h3>
+                <iframe
+                  src={getMapSrc(place.mapEmbed)}
+                  width="100%"
+                  height="380"
+                  style={{ border: 0, borderRadius: "12px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${place.name}`}
+                />
+              </div>
+            )}
           </section>
         </div>
       </section>

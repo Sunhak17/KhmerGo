@@ -11,7 +11,7 @@ async function getStaysByProvinceId(provinceId, typeFilter) {
   }
 
   const [rows] = await pool.query(
-    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url
+    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed
      FROM stays
      WHERE province_id = ? ${whereTypeClause}
      ORDER BY id ASC`,
@@ -77,7 +77,7 @@ async function getServiceProvinceSections() {
 
 async function getStayById(stayId) {
   const [rows] = await pool.query(
-    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url
+    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed
      FROM stays
      WHERE id = ?
      LIMIT 1`,
@@ -89,7 +89,7 @@ async function getStayById(stayId) {
 
 async function getStayByProvinceAndSlug(provinceId, staySlug) {
   const [rows] = await pool.query(
-    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url
+    `SELECT id, province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed
      FROM stays
      WHERE province_id = ? AND slug = ?
      LIMIT 1`,

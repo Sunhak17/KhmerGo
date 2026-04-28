@@ -69,15 +69,15 @@ exports.getPlaces = async (req, res) => {
 
 exports.createPlace = async (req, res) => {
   try {
-    const { province_id, name, slug, tag, best_for, detail, image_url } = req.body;
+    const { province_id, name, slug, tag, best_for, detail, image_url, website_url, map_embed } = req.body;
 
     if (!province_id || !name || !slug) {
       return res.status(400).json({ success: false, message: "Missing required fields" });
     }
 
     await db.query(
-      "INSERT INTO places (province_id, name, slug, tag, best_for, detail, image_url) VALUES (?, ?, ?, ?, ?, ?, ?)",
-      [province_id, name, slug, tag || null, best_for || null, detail || null, image_url || null]
+      "INSERT INTO places (province_id, name, slug, tag, best_for, detail, image_url, website_url, map_embed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [province_id, name, slug, tag || null, best_for || null, detail || null, image_url || null, website_url || null, map_embed || null]
     );
 
     res.status(201).json({ success: true, message: "Place created successfully" });
@@ -89,11 +89,11 @@ exports.createPlace = async (req, res) => {
 exports.updatePlace = async (req, res) => {
   try {
     const { id } = req.params;
-    const { province_id, name, slug, tag, best_for, detail, image_url } = req.body;
+    const { province_id, name, slug, tag, best_for, detail, image_url, website_url, map_embed } = req.body;
 
     await db.query(
-      "UPDATE places SET province_id=?, name=?, slug=?, tag=?, best_for=?, detail=?, image_url=? WHERE id=?",
-      [province_id, name, slug, tag || null, best_for || null, detail || null, image_url || null, id]
+      "UPDATE places SET province_id=?, name=?, slug=?, tag=?, best_for=?, detail=?, image_url=?, website_url=?, map_embed=? WHERE id=?",
+      [province_id, name, slug, tag || null, best_for || null, detail || null, image_url || null, website_url || null, map_embed || null, id]
     );
 
     res.status(200).json({ success: true, message: "Place updated successfully" });
@@ -126,15 +126,15 @@ exports.getStays = async (req, res) => {
 
 exports.createStay = async (req, res) => {
   try {
-    const { province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url } = req.body;
+    const { province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed } = req.body;
 
     if (!province_id || !name || !slug || !stay_type) {
       return res.status(400).json({ success: false, message: "Missing required fields" });
     }
 
     await db.query(
-      "INSERT INTO stays (province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      [province_id, name, slug, stay_type, best_for || null, detail || null, price_min || null, price_max || null, currency_code || 'USD', image_url || null]
+      "INSERT INTO stays (province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [province_id, name, slug, stay_type, best_for || null, detail || null, price_min || null, price_max || null, currency_code || 'USD', image_url || null, website_url || null, map_embed || null]
     );
 
     res.status(201).json({ success: true, message: "Stay created successfully" });
@@ -146,11 +146,11 @@ exports.createStay = async (req, res) => {
 exports.updateStay = async (req, res) => {
   try {
     const { id } = req.params;
-    const { province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url } = req.body;
+    const { province_id, name, slug, stay_type, best_for, detail, price_min, price_max, currency_code, image_url, website_url, map_embed } = req.body;
 
     await db.query(
-      "UPDATE stays SET province_id=?, name=?, slug=?, stay_type=?, best_for=?, detail=?, price_min=?, price_max=?, currency_code=?, image_url=? WHERE id=?",
-      [province_id, name, slug, stay_type, best_for || null, detail || null, price_min || null, price_max || null, currency_code || 'USD', image_url || null, id]
+      "UPDATE stays SET province_id=?, name=?, slug=?, stay_type=?, best_for=?, detail=?, price_min=?, price_max=?, currency_code=?, image_url=?, website_url=?, map_embed=? WHERE id=?",
+      [province_id, name, slug, stay_type, best_for || null, detail || null, price_min || null, price_max || null, currency_code || 'USD', image_url || null, website_url || null, map_embed || null, id]
     );
 
     res.status(200).json({ success: true, message: "Stay updated successfully" });

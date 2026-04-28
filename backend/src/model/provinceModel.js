@@ -23,6 +23,8 @@ function mapPlace(row) {
     detail: row.detail,
     image_url: row.image_url,
     imageUrl: row.image_url,
+    websiteUrl: row.website_url || null,
+    mapEmbed: row.map_embed || null,
   };
 }
 
@@ -50,7 +52,7 @@ async function getProvinceById(provinceId) {
 
 async function getPlacesByProvinceId(provinceId) {
   const [rows] = await pool.query(
-    `SELECT id, province_id, name, slug, tag, best_for, detail, image_url
+    `SELECT id, province_id, name, slug, tag, best_for, detail, image_url, website_url, map_embed
      FROM places
      WHERE province_id = ?
      ORDER BY id ASC`,

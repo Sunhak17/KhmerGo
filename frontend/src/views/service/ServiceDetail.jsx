@@ -44,6 +44,12 @@ export default function ServiceDetail() {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [provinceId, staySlug]);
 
+  function getMapSrc(value) {
+    if (!value) return null;
+    const match = value.match(/src=["']([^"']+)["']/);
+    return match ? match[1] : value.trim();
+  }
+
   return (
     <div className="app-wrapper">
       <Navbar />
@@ -80,8 +86,35 @@ export default function ServiceDetail() {
                 </div>
                 <h3>{stay?.name || ""}</h3>
                 <p>{stay?.detail || ""}</p>
+
+                {stay?.websiteUrl && (
+                  <a
+                    href={stay.websiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="place-detail-link"
+                  >
+                    Visit official site
+                  </a>
+                )}
               </div>
             </article>
+
+            {stay?.mapEmbed && (
+              <div className="place-detail-map">
+                <h3>Location</h3>
+                <iframe
+                  src={getMapSrc(stay.mapEmbed)}
+                  width="100%"
+                  height="380"
+                  style={{ border: 0, borderRadius: "12px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${stay?.name}`}
+                />
+              </div>
+            )}
           </section>
         </div>
       </section>
