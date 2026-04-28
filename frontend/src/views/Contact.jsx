@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaMobileAlt,
@@ -13,6 +13,7 @@ import {
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import faqVisual from "../assets/images/slider/4.jpg";
+import { fetchJson } from "../services/api";
 import "../styles/pages/Contact.css";
 
 const faqItems = [
@@ -43,6 +44,27 @@ const faqItems = [
 ];
 
 export default function Contact() {
+  const [form, setForm] = useState({ fullName: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState(null); // "sending" | "success" | "error"
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      await fetchJson("/contact-messages", {
+        method: "POST",
+        body: JSON.stringify(form),
+      });
+      setStatus("success");
+      setForm({ fullName: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
+  };
   return (
     <div className="app-wrapper">
       <Navbar />
@@ -52,30 +74,32 @@ export default function Contact() {
           <header className="contact-heading">
             <h1>Connect with Our Team</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,
-              lectus magna fringilla urna, porttitor.
+              How Can We Help?
             </p>
           </header>
 
           <div className="contact-grid">
             <article className="contact-form-card">
               <h2>Get in Touch with Us</h2>
-              <form onSubmit={(event) => event.preventDefault()}>
+              <form onSubmit={handleSubmit}>
                 <div className="contact-inline-fields">
-                  <input type="text" placeholder="Input your name" aria-label="Name" />
-                  <input type="email" placeholder="Input your email" aria-label="Email" />
+                  <input type="text" name="fullName" value={form.fullName} onChange={handleChange} placeholder="Input your name" aria-label="Name" required />
+                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Input your email" aria-label="Email" required />
                 </div>
-                <input type="text" placeholder="Subject" aria-label="Subject" />
-                <textarea rows="6" placeholder="Input your message request" aria-label="Message" />
-                <button type="submit">Send message</button>
+                <input type="text" name="subject" value={form.subject} onChange={handleChange} placeholder="Subject" aria-label="Subject" />
+                <textarea rows="6" name="message" value={form.message} onChange={handleChange} placeholder="Input your message request" aria-label="Message" required />
+                {status === "success" && <p style={{ color: "#4caf88", marginBottom: "8px" }}>Message sent successfully!</p>}
+                {status === "error" && <p style={{ color: "#e05c5c", marginBottom: "8px" }}>Failed to send. Please try again.</p>}
+                <button type="submit" disabled={status === "sending"}>
+                  {status === "sending" ? "Sending…" : "Send message"}
+                </button>
               </form>
             </article>
 
             <article className="contact-details-card">
               <h2>Contact Details</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur elit. Integer feugiat velit et turpis tristique, sit amet
-                varius ipsum.
+                Feel Free To Ask
               </p>
 
               <div className="contact-detail-grid">
