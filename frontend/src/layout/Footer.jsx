@@ -40,7 +40,7 @@ export default function Footer() {
             <button type="submit" aria-label="Subscribe">→</button>
           </form>
           <div className="footer-payments" aria-label="Payment methods">
-            <span>PayPal</span>
+            <span>KHQR</span>
             <span>Visa</span>
             <span>Mastercard</span>
             <span>ABA</span>

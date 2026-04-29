@@ -45,7 +45,7 @@ const faqItems = [
 
 export default function Contact() {
   const [form, setForm] = useState({ fullName: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState(null); // "sending" | "success" | "error"
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
