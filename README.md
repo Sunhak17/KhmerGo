@@ -67,13 +67,6 @@ npm install
 
 Create MySQL database and tables:
 
-```bash
-cd backend
-mysql -u root -p < path/to/schema.sql
-```
-
-Or manually create the database:
-
 ```sql
 CREATE DATABASE khmergo_db CHARACTER SET utf8mb4;
 USE khmergo_db;
