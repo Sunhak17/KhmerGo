@@ -29,19 +29,70 @@
   text-underline-offset: 5px;
 }
 
-.popular-tours-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+.popular-tours-carousel {
+  position: relative;
+  width: 100%;
+}
+
+.popular-tours-stage {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.popular-tours-ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: popularTourSpin 18s linear infinite;
+}
+
+.popular-tours-carousel:hover .popular-tours-ring {
+  animation-play-state: paused;
 }
 
 .popular-tour-card {
   position: relative;
-  min-height: 365px;
+  width: 220px;
+  height: 320px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid rgba(146, 210, 255, 0.28);
   background: #0d131a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(calc(var(--i, 0) * 72deg)) translateZ(320px);
+  opacity: 0;
+  animation: popularTourFade 0.7s ease forwards;
+  transform-style: preserve-3d;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  will-change: transform;
+}
+
+.popular-tour-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.popular-tour-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.popular-tour-card:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.popular-tour-card:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.popular-tour-card:nth-child(5) {
+  animation-delay: 0.33s;
 }
 
 .popular-tour-image {
@@ -49,22 +100,27 @@
   height: 100%;
   object-fit: cover;
   filter: saturate(0.86);
+  transform: scale(1.02);
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .popular-tour-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(5, 10, 16, 0.1) 28%, rgba(5, 10, 16, 0.86) 100%);
+  transition: opacity 0.45s ease;
 }
 
 .popular-tour-content {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 18px;
   z-index: 1;
   padding: 0 14px 14px;
   text-align: center;
+  transform: translateY(8px);
+  transition: transform 0.45s ease;
 }
 
 .popular-tour-content h3 {
@@ -80,13 +136,63 @@
   color: rgba(226, 235, 245, 0.82);
 }
 
+.popular-tour-card:hover .popular-tour-image {
+  transform: scale(1.1);
+  filter: saturate(1.05);
+}
+
+.popular-tour-card:hover .popular-tour-overlay {
+  opacity: 0.78;
+}
+
+.popular-tour-card:hover .popular-tour-content {
+  transform: translateY(0);
+}
+
+.popular-tour-card:hover {
+  transform: translate(-50%, -50%) rotateY(calc(var(--i, 0) * 72deg)) translateZ(360px) scale(1.06);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+@keyframes popularTourFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popularTourSpin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popular-tour-card,
+  .popular-tour-image,
+  .popular-tour-overlay,
+  .popular-tour-content {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
+
 @media (max-width: 1100px) {
-  .popular-tours-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .popular-tours-stage {
+    height: 380px;
   }
 
   .popular-tour-card {
-    min-height: 320px;
+    width: 200px;
+    height: 300px;
+    transform: translate(-50%, -50%) rotateY(calc(var(--i, 0) * 72deg)) translateZ(280px);
   }
 }
 
@@ -95,11 +201,13 @@
     padding: 72px 0;
   }
 
-  .popular-tours-grid {
-    grid-template-columns: 1fr;
+  .popular-tours-stage {
+    height: 320px;
   }
 
   .popular-tour-card {
-    min-height: 280px;
+    width: 180px;
+    height: 260px;
+    transform: translate(-50%, -50%) rotateY(calc(var(--i, 0) * 72deg)) translateZ(230px);
   }
 }

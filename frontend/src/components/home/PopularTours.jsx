@@ -46,9 +46,15 @@ export default function PopularTours() {
         <h2>Popular Tours</h2>
         <p className="popular-tours-subtitle">Explore our most popular tours and destinations</p>
         
-        <div className="popular-tours-grid">
-          {tours.map((tour) => (
-            <article key={tour.id} className="popular-tour-card">
+        <div className="popular-tours-carousel">
+          <div className="popular-tours-stage">
+            <div className="popular-tours-ring">
+              {tours.map((tour, index) => (
+                <article
+                  key={tour.id}
+                  className="popular-tour-card"
+                  style={{ "--i": index }}
+                >
               <img src={tour.image} alt={tour.title} className="popular-tour-image" />
               <div className="popular-tour-overlay" />
               <div className="popular-tour-content">
@@ -56,7 +62,9 @@ export default function PopularTours() {
                 <p>{tour.description}</p>
               </div>
             </article>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
